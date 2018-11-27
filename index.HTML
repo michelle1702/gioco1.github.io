@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gioco</title>
+</head>
+<body>
+<img id="cuore" onmouseover="scappaImg()"  src="http://www.laboratoriopesaro.com/wp-content/uploads/2017/03/Cuore-rosso.jpg"  width="105" height="100"/>
+
+<script>
+  
+function scappaImg() {
+    var x = event.clientX;
+    var y = event.clientY;
+    var cuore= document.getElementById("cuore");
+if (x=cuore.style.left) {
+cuore.style.left=x+50+"px";
+}
+}
+scappaImg()
+</script>
+</body>
+</html>
