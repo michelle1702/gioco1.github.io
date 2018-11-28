@@ -4,19 +4,33 @@
 <title>gioco</title>
 </head>
 <body>
-<img id="cuore" onmouseover="scappaImg()"  src="http://www.laboratoriopesaro.com/wp-content/uploads/2017/03/Cuore-rosso.jpg"  width="105" height="100"/>
+<img id="cuore"  src="http://www.laboratoriopesaro.com/wp-content/uploads/2017/03/Cuore-rosso.jpg"  width="105" height="100"/>
 
 <script>
   
-function scappaImg() {
-    var x = event.clientX;
-    var y = event.clientY;
-    var cuore= document.getElementById("cuore");
-if (x==cuore.style.left) {
-cuore.style.left==x+50+"px";
-}
-}
-scappaImg()
+		
+	    var cuoreImg = document.getElementById("cuore");
+  
+    var onImgClick = function() {
+      var x=Math.floor((Math.random()*100)+1) ;
+         var y=Math.floor((Math.random()*100)+1) ;
+         cuore.style.left=x+50+"px";
+         cuore.style.top=y+50+"px";
+    };
+
+    cuoreImg.addEventListener("mouseover", onImgClick);
 </script>
+<style>
+	
+
+	 #cuore {
+           position:absolute;
+		 
+      
+        }
+
+	  
+	 
+</style>
 </body>
 </html>
